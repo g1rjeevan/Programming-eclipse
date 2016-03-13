@@ -1,0 +1,37 @@
+package com.jspiders.admin;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class UpdateTheStateTax {
+
+public void updatestate(Connection c){
+		
+		Scanner s1=new Scanner(System.in);
+		System.out.println("Enter the State name");
+		String name=s1.next();
+		String sql="UPDATE jecm4.tax SET tax=? WHERE name='"+name+"'";
+		System.out.println("Enter the tax rate");
+		double tax=s1.nextDouble();
+	
+		try {
+			PreparedStatement pstm = c.prepareStatement(sql);
+			
+			pstm.setDouble(1, tax);
+			pstm.executeUpdate();
+			System.out.println("STATE DETAILS HAS BEEN UPDATED");
+			
+			
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		finally{
+			s1.close();
+		}
+		
+		
+	}
+
+}

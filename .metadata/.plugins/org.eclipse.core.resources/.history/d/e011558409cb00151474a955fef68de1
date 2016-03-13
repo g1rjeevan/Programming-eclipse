@@ -1,0 +1,39 @@
+package com.jspiders.admin;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class UpdateTheCar {
+public void updatecar(Connection c){
+		
+		Scanner s1=new Scanner(System.in);
+		String sql="UPDATE jecm4.car SET (?,?,?)";
+		System.out.println("Enter the ID");
+		int id=s1.nextInt();
+		System.out.println("Enter the Car name");
+		String name=s1.next();
+		System.out.println("Enter the cost of the car");
+		int cost=s1.nextInt();
+	
+		try {
+			PreparedStatement pstm = c.prepareStatement(sql);
+			pstm.setInt(1, id);
+			pstm.setString(2, name);
+			pstm.setInt(3, cost);
+			pstm.executeUpdate();
+			System.out.println("CAR DETAILS HAS BEEN INSERTED");
+			
+			
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		finally{
+			s1.close();
+		}
+		
+		
+	}
+
+}

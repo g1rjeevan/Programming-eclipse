@@ -1,0 +1,35 @@
+package com.G1.Java.Eg1.Person;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class PersonController {
+
+	public static void main(String[] args) {
+		PersonDTO pdto=new PersonDTO();
+		PersonDAO pdao=new PersonDAO();
+		pdao.add(pdto);
+		
+		
+	}
+	public static Session sessionReturner(){
+		//Component 1
+		Configuration cfg=new Configuration();
+		cfg.configure();
+		cfg.addAnnotatedClass(PersonDTO.class);
+		//component 2
+		SessionFactory factory=;
+		//component 3
+		Session session = cfg.buildSessionFactory().openSession();
+		return session;
+	}
+	public static Transaction tx(){
+		Session session=PersonController.sessionReturner();
+		//component 1 from component 3
+		Transaction tx=session.beginTransaction();
+		return tx;
+	}
+
+}

@@ -1,0 +1,16 @@
+package tests;
+
+public class WithoutAnyAPIfindSUbstring {
+	public static void main(String[] args) {
+		String s="programming is programming";
+		String s1="gram";
+		
+			StringTokenizer s = new StringTokenizer(in, s); 
+			while(s.hasMoreTokens()) { 
+				String key = s.nextToken(); 
+				String val = s.nextToken(); 
+				System.out.println(key + "\t" + val); 
+			} 
+		} 
+}
+

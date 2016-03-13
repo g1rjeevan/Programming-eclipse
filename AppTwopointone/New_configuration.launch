@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jst.server.tomcat.core.launchConfigurationType">
+<booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="false"/>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="CATALINA_HOME" value="F:\studies\jspiderssoftwares\newtoday\apache-tomcat-7.0.27"/>
+<mapEntry key="CATALINE_HOME" value=" F:\studies\jspiderssoftwares\newtoday\apache-tomcat-7.0.27"/>
+<mapEntry key="JAVA_HOME" value="C:\Program Files (x86)\Java\jdk1.7.0_10"/>
+</mapAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+</launchConfiguration>

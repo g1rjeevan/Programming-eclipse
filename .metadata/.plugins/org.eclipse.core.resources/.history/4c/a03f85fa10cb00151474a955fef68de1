@@ -1,0 +1,21 @@
+package com.jspiders.User;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DisplayAllCars {
+	
+	void displayallcars(Connection c){
+	String sql="SELECT * FROM car";
+	try {
+		Statement stm = c.createStatement();
+		stm.executeQuery(sql);
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+	
+	}
+	
+
+}

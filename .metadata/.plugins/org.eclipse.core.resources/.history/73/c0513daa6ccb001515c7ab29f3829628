@@ -1,0 +1,61 @@
+package com.jspiders.User;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class DisplayOnRoadPrice {
+	public void displayonroadprice(Connection c){
+		Scanner s1=new Scanner(System.in);
+		String sql="SELECT * FROM jecm4.car WHERE name=?";
+		String sql1="SELECT * FROM jecm4.tax WHERE state=?";
+		int cost = 0;
+		double taxrate = 0,totalcost=0;
+		System.out.println("Enter the Car name");
+		String cname=s1.next();
+		System.out.println("Enter the State name");
+		String sname=s1.next();
+		try {
+			PreparedStatement pstm = c.prepareStatement(sql);
+			PreparedStatement pstm1 = c.prepareStatement(sql1);
+			pstm.setString(1,cname);
+			pstm1.setString(1,sname);
+			ResultSet rst=pstm.executeQuery();
+			ResultSet rst1=pstm1.executeQuery();//
+			if(rst.next()&&rst1.next()){
+				cost=rst.getInt(3);
+				System.out.println(cost);
+				String ss=rst1.getString(2);
+				System.out.println(ss);
+				/*double taxcost=cost*(taxrate/100);
+				totalcost=cost+taxcost;
+				System.out.println(cost);
+				System.out.println(taxcost);
+				System.out.println(totalcost);
+				System.out.println("ON-ROAD PRICE OF CAR FOR THE RESPECTIVE STATE="+totalcost);*/
+				
+			}
+			else{
+				System.err.println("No such Details found");
+			}
+			
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				c.close();
+				s1.close();
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+
+}

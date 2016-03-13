@@ -1,0 +1,18 @@
+package libraryArray;
+
+public class Employee implements Comparable{
+
+	int id;
+	String name;
+	double salary;
+	public Employee(int id,String name,double salary){
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+	}
+	public int compareTo(Object arg){
+		Employee e1=(Employee)arg;
+		return this.id-e1.id;
+	}
+	
+}

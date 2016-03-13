@@ -1,0 +1,34 @@
+package tests;
+
+public class Initcapandascendingorder {
+
+	public static void main(String[] args) {
+		String[] s=new String[5];
+		s[0]="java is good";
+		System.out.println(s[0]);
+		char[] c=s[0].toCharArray();
+		char[] c1 = null;
+		int startIndex=0, endIndex=0, l=1;
+		for (int i = 0; i < c.length; i++) {
+			if(c[i]==32){
+				endIndex=i;
+				int j = 0;
+				for (int k=startIndex;k<=endIndex-2;i++){
+					try{
+					
+					c1[j]=c[k];
+					j++;
+					
+					}
+					catch(ArrayIndexOutOfBoundsException e)
+					{
+					
+					}
+				}
+				s[l]=new String(c1);
+				startIndex=i+1;
+				l++;
+			}
+		}
+	}
+}

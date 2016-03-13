@@ -1,0 +1,46 @@
+package tests;
+
+public class Initcapandascendingorder {
+
+	public static void main(String[] args) {
+		String[] s=new String[5];
+		s[0]="java is good";
+		System.out.println(s[0]);
+		char[] c=s[0].toCharArray();
+		
+		int startIndex=0, endIndex=0,l=1;
+		for (int i = 0; i < c.length; i++) {
+			
+				if(c[i]==32){
+				endIndex=i;
+				s[l]=s[0].substring(startIndex,endIndex);
+				System.out.println(s[l]);
+				startIndex=i+1;
+				l++;
+				}
+			}
+			endIndex=c.length;
+			s[l]=s[0].substring(startIndex,endIndex);
+			System.out.println(s[l]);
+			char[] c1=s[1].toCharArray();
+			char[] c2=s[2].toCharArray();
+			char[] c3=s[3].toCharArray();
+			String temp;
+			c1[1]=c2[0];
+			c1[2]=c3[0];
+			for(int h=1;h<=l;h++){
+			if(c1[h-1]>c1[h]){
+				temp=s[1];
+				s[1]=s[2];
+				s[2]=temp;
+			}
+			}
+for (int i = 0; i < =2; i++) {
+				
+			}
+			
+			
+	}
+}
+	
+

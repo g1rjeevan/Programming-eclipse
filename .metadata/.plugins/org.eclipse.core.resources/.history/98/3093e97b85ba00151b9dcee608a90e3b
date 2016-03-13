@@ -1,0 +1,9 @@
+package tests;
+
+public class Initcapandascendingorder {
+
+	public static void main(String[] args) {
+		String s="java is good";
+		System.out.println(s);
+	}
+}

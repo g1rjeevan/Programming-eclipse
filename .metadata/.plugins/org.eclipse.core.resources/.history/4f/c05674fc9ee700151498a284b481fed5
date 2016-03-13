@@ -1,0 +1,57 @@
+package com.G1.Java.Eg1.Person;
+
+import java.io.Serializable;
+
+import org.hibernate.annotations.Entity;
+import org.hibernate.annotations.Table;
+@Entity
+@Table(name="Person_practice_Table")
+public class PersonDTO implements Serializable{
+	@Id
+	@c
+	private int pId;
+	private String pName;
+	private	char pGender;
+	private	String pBloodGroup;
+	private int pAge;
+	private String pStatus;
+	public int getpId() {
+		return pId;
+	}
+	public void setpId(int pId) {
+		this.pId = pId;
+	}
+	public String getpName() {
+		return pName;
+	}
+	public void setpName(String pName) {
+		this.pName = pName;
+	}
+	public char getpGender() {
+		return pGender;
+	}
+	public void setpGender(char pGender) {
+		this.pGender = pGender;
+	}
+	public String getpBloodGroup() {
+		return pBloodGroup;
+	}
+	public void setpBloodGroup(String pBloodGroup) {
+		this.pBloodGroup = pBloodGroup;
+	}
+	public int getpAge() {
+		return pAge;
+	}
+	public void setpAge(int pAge) {
+		this.pAge = pAge;
+	}
+	public String getpStatus() {
+		return pStatus;
+	}
+	public void setpStatus(String pStatus) {
+		this.pStatus = pStatus;
+	}
+
+
+
+}

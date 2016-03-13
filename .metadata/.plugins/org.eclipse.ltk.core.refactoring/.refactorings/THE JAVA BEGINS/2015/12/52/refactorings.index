@@ -1,0 +1,7 @@
+1450833411780	Extract local variable 'scanner'
+1450833421609	Inline local variable 'scanner'
+1450833427441	Extract local variable 'scanner'
+1450833435269	Convert local variable 'scanner' to field
+1450929200876	Convert local variable 's' to field
+1450931462724	Delete element
+1451048093985	Convert local variable 's1' to field

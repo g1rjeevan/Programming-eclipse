@@ -1,0 +1,43 @@
+package com.jspiders.User;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DisplayGivenCar {
+	public void displayallcars(Connection c){
+
+		String sql="SELECT * FROM jecm4.car WHERE name=?";
+		try {
+			PreparedStatement pstm = c.prepareStatement(sql);
+			System.out.println("Enter the Car name");
+			String name=s1.next();
+			ResultSet rst=pstm.executeQuery();
+			System.out.println("ID\tName         \tCost");
+			while(rst.next()){
+				System.out.println("--------------------------------------------------");
+				int i=rst.getInt(1);
+				String n=rst.getString(2);
+				int co=rst.getInt(3);
+				System.out.println(i+"\t"+n+"       \t"+co);
+				
+
+			}
+			System.out.println("--------------------------------------------------");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				c.close();
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+
+}

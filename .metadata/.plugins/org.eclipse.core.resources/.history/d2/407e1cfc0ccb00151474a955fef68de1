@@ -1,0 +1,37 @@
+package com.jspiders.admin;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class DeleteTheCar {
+	
+public void deletecar(Connection c){
+		
+		Scanner s1=new Scanner(System.in);
+		
+		String sql="DELETE FROM jecm4.car WHERE name=?";
+		System.out.println("Enter the Car name");
+		String name=s1.next();
+	
+		try {
+			PreparedStatement pstm = c.prepareStatement(sql);
+			
+			pstm.setString(1, name);
+			pstm.executeUpdate();
+			System.out.println("CAR DETAILS HAS BEEN UPDATED");
+			
+			
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		finally{
+			s1.close();
+		}
+		
+		
+	}
+	
+	
+}

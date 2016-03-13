@@ -1,0 +1,22 @@
+package tests;
+
+public class Prinht1to100noloop {
+
+	public static void main(String[] args) {
+		int n=1;
+
+	Bitch.call(n);
+	}
+}
+class Bitch{
+	static int call(int n){
+		if(n==16){
+			System.out.println(n);
+		return 0;
+		}
+		
+		System.out.println(n);
+		n++;
+		return call(8*n);
+		}
+}

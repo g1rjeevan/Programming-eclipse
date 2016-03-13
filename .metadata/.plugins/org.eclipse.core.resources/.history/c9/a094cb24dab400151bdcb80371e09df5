@@ -1,0 +1,49 @@
+package Exceptions;
+
+public class Demo2 {
+ 
+	public static void main(String[] args) {
+		
+		System.out.println("********************");
+		
+		int[] arr1 = new int[5];
+		int i=12;
+		int j=0;
+		try{
+			System.out.println("Running outter try block");
+	          try{
+	        	  
+	        	  System.out.println("Running inner try block");
+	 	         
+	        	  j=i/0;
+	          
+	        System.out.println("Exiting inner try block");;
+	          
+		}
+		catch(ArithmeticException e){
+			System.out.println("Arithematic Exception");
+		}
+	          System.out.println("Exiting the outter try block");
+		}
+		
+		
+			catch(ArrayIndexOutOfBoundsException ex) {
+				
+			System.out.println("ArrayIndexOutOfBoundsException handled");
+			}
+		
+		System.out.println("i value: "	+i);
+		System.out.println("j value: "+j);
+		System.out.println("Array elements");
+		for(int j1=0;j1<arr1.length;j1++){
+			System.out.println(arr1[j1]);
+		}
+		
+		
+		
+		System.out.println("********************");
+		
+	
+	
+}
+}

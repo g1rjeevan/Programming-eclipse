@@ -1,0 +1,22 @@
+package com.jspiders.admin;
+
+import java.util.Scanner;
+
+public class InsertCar {
+	
+	void insertcar(){
+
+		Scanner s1=new Scanner(System.in);
+	String sql="INSERT INTO jecm4.car VALUES(?,?,?)";
+	System.out.println("Enter the ID");
+	int id=s1.nextInt();
+	System.out.println("Enter the Car name");
+	String name=s1.next();
+	System.out.println("Enter the cost of the car");
+	int cost=s1.nextInt();
+	
+	}
+	
+	
+	
+}

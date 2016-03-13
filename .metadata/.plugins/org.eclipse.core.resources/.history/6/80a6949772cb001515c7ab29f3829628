@@ -1,0 +1,39 @@
+package com.jspiders.admin;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class InsertNewStateTax {
+public void insertstate(Connection c){
+		
+		Scanner s1=new Scanner(System.in);
+		String sql="INSERT INTO jecm4.tax VALUES(?,?,?)";
+		System.out.println("Enter the ID");
+		int id=s1.nextInt();
+		System.out.println("Enter the State name");
+		String name=s1.next();
+		System.out.println("Enter the tax rate");
+		double tax=s1.nextDouble();
+	
+		try {
+			PreparedStatement pstm = c.prepareStatement(sql);
+			pstm.setInt(1, id);
+			pstm.setString(2, name);
+			pstm.setDouble(3, tax);
+			pstm.executeUpdate();
+			System.out.println("STATE DETAILS HAS BEEN INSERTED");
+			
+			
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		finally{
+			s1.close();
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.G1.Java.Eg1.Person;
+
+public class PersonDTO {
+
+}

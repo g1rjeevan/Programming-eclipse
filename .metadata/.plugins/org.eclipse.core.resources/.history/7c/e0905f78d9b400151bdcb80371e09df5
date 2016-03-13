@@ -1,0 +1,23 @@
+package Exceptions;
+
+public class Demo2 {
+ 
+	public static void main(String[] args) {
+		
+		System.out.println("********************");
+		
+		int[] arr1 = new int[5];
+		int i=12;
+		int j=0;
+		try{
+			System.out.println("Running try block");
+		}
+		catch(){
+			
+		}
+		
+		System.out.println("********************");
+		
+	}
+	
+}

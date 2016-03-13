@@ -1,0 +1,20 @@
+package com.hrs;
+
+public class Array_element_repeat_deleter {
+
+	public static void main(String[] args) {
+
+		int arr[]={1,2,2,2,3,3};
+		int count=1;
+		
+			for(int j=0;j<arr.length-1;j++)
+			{
+				if(0==j)
+					j++;
+				if(arr[0]==arr[j])
+					count++;
+			}
+			System.out.println(count);
+		
+}
+}

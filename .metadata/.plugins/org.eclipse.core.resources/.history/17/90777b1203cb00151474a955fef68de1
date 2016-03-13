@@ -1,0 +1,21 @@
+package com.jspiders.DB;
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.util.Properties;
+
+public class DBonObject {
+	
+	public static Connection conObject(){
+		FileInputStream file=new FileInputStream("Myproperties.properties");
+		Properties prp=new Properties();
+		prp.load(file);
+		String d=prp.getProperty("driver");
+		String u=prp.getProperty("url");
+		Class.forName(d);
+		
+		return con;
+		
+	}
+
+}

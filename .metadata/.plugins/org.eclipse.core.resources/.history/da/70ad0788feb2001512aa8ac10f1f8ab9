@@ -1,0 +1,10 @@
+package toString;
+
+public class Sample1 extends Object {
+
+	public String toString(){
+		return "FUCK U BITCH"; 
+	}
+	
+}
+

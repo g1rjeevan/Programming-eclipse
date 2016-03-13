@@ -1,0 +1,20 @@
+package com.G1.Java.Eg1.Person;
+
+public class PersonDAO {
+
+	public void add(PersonDTO pdto){
+		
+
+
+	}
+	public void delete(PersonDTO pdto){
+
+	}
+	public void update(PersonDTO pdto){
+
+	}
+	public void save(PersonDTO pdto){
+
+	}
+
+}

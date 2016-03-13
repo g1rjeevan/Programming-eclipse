@@ -1,0 +1,28 @@
+package com.jpsiders.Main;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.util.Scanner;
+
+import com.jspiders.DB.DBonObject;
+
+public class MainClass {
+	public static void main(String[] args) throws IOException {
+		Scanner scan=new Scanner(System.in);
+		Connection con=DBonObject.conObject();
+		System.out.println("Enter the 1 for ADMIN and 2 for USER");
+		int choice=scan.nextInt();
+		switch (choice) {
+		case 1:
+			
+			break;
+
+		case 2:
+			
+			break;
+		default:
+			break;
+		}
+	}
+
+}

@@ -1,0 +1,42 @@
+package com.jspiders.User;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DisplayAllCars {
+
+	public void displayallcars(Connection c){
+
+		String sql="SELECT * FROM jecm4.car";
+		try {
+			Statement stm = c.createStatement();
+			ResultSet rst=stm.executeQuery(sql);
+			System.out.println("ID\t\tName         \tCost");
+			while(rst.next()){
+				int i=rst.getInt(1);
+				String n=rst.getString(2);
+				int co=rst.getInt(3);
+				System.out.println(i+"\t\t"+n+"       \t"+co);
+				System.out.println("------------------");
+
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				c.close();
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+
+}
+
+

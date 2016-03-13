@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/answer.pseudo/src/gMain12.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="CATALINA_HOME" value="F:\studies\jspiderssoftwares\newtoday\apache-tomcat-7.0.27"/>
+<mapEntry key="CATALINE_HOME" value=" F:\studies\jspiderssoftwares\newtoday\apache-tomcat-7.0.27"/>
+<mapEntry key="COMPUTERNAME" value="JEEVAN-G1"/>
+<mapEntry key="JAVA_HOME" value="C:\Program Files (x86)\Java\jdk1.7.0_10"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="gMain12"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="answer.pseudo"/>
+</launchConfiguration>

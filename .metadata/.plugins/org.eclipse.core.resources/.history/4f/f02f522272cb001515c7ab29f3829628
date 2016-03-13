@@ -1,0 +1,14 @@
+package com.jpsiders.Main;
+
+import java.sql.Connection;
+
+public interface Carwale {
+	void insertcar(Connection c);
+	void insertstate(Connection c);
+	void updatecar(Connection c);
+	void updatestate(Connection c);
+	void deletecar(Connection c);
+	void deletestate(Connection c);
+	void displayallcars(Connection c);
+
+}
