@@ -13,7 +13,7 @@ public class PersonDAO
 	public static void main(String[] args) 
 	{
 		Scanner s=new Scanner(System.in);
-		System.out.println("new and improved me with github");
+
 		PersonDTO jeevan=new PersonDTO();
 		//jeevan.setPid(1);
 		System.out.println("Enter the name ");
