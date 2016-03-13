@@ -12,7 +12,7 @@ public class PersonDAO {
 
 
 	public PersonDTO add(PersonDTO pdto){
- System.out.println("Checking checking 1..2..3..");
+		System.out.println("Checking checking 1..2..3..");
 		System.out.println("Enter the person name");
 		String pName=scan.next();
 		System.out.println("Enter the gender Male or Female");
@@ -34,15 +34,15 @@ public class PersonDAO {
 		return pdto;
 
 	}
-	public void delete(PersonDTO pdto){
+	public PersonDTO delete(PersonDTO pdto,Session session, Transaction tx){
 		System.out.println("Enter the person name");
 		String pName=scan.next();
-
 		System.out.println("Enter the person ID");
 		int pID=scan.nextInt();
-
-
-
+		String hql="FROM PersonDTO WHERE pName='"+pName+"' AND pId="+pID;
+		Query query=session.createQuery(hql);
+		PersonDTO pN=(PersonDTO) query.uniqueResult();
+		return pN;
 	}
 	public PersonDTO update(PersonDTO pdto,Session session, Transaction tx){
 		System.out.println("Enter the person Name");
@@ -53,10 +53,10 @@ public class PersonDAO {
 		tx=session.beginTransaction();
 		pdto=session.load(PersonDTO.class, pN.getpId());
 		System.out.println(pdto.getpName());
-		System.out.println(pdto.getpStatus());
-		System.out.println("Enter ther new Status");
-		pName=scan.next();
-		pdto.setpStatus(pName);
+		System.out.println(pdto.getpId());
+		System.out.println("Enter ther age");
+		int pAge=scan.nextInt();
+		pdto.setpAge(pAge);
 		System.out.println(pdto.getpStatus());
 		return pdto;
 	}

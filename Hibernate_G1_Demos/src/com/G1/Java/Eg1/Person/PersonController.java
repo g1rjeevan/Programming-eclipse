@@ -29,6 +29,9 @@ public class PersonController {
 			//session.save(pdto);
 			pdto=pdao.update(pdto, session, tx);
 			session.update(pdto);
+			//pdto=pdao.delete(pdto, session, tx);
+			//session.delete(pdto);
+			//session.flush();
 			tx.commit();
 		}
 		catch(HibernateException e){
