@@ -12,7 +12,7 @@ public class PersonDAO {
 
 
 	public PersonDTO add(PersonDTO pdto){
-
+ System.out.println("Checking checking 1..2..3..");
 		System.out.println("Enter the person name");
 		String pName=scan.next();
 		System.out.println("Enter the gender Male or Female");
