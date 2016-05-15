@@ -1,0 +1,33 @@
+package tests;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+
+public class StringMaventic1R2a0j0e0n0draSharma {
+
+	public static void main(String[] args) {
+		String s1="Rajeshndra";
+		String s2="ShArmA";
+		char[] c1=s1.toCharArray();	
+		char[] c2=s2.toCharArray();
+		int count=0;
+		LinkedList<Character> l1=new LinkedList<Character>();
+		for (int i = 0; i < c1.length; i++) {
+			for (int j= 0; j < c2.length; j++) {
+				if(c2[j]==c1[i]||c1[i]==(c2[j]+32)||c1[i]==(c2[j]-32)){
+					count++;
+				}
+			}
+for (int k = 0; k < l1.size(); k++) {
+	
+}
+
+			System.out.print(count);
+
+
+			System.out.print(c1[i]);
+			count=0;
+		}
+	}
+
+}

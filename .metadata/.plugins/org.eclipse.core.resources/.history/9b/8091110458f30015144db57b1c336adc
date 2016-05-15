@@ -1,0 +1,42 @@
+package tests;
+
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class StringMaventic1R2a0j0e0n0draSharma {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the first name");
+		String s1=s.next();
+		System.out.println("Enter the first name");
+		String s2=s.next();
+		char[] c1=s1.toCharArray();	
+		char[] c2=s2.toCharArray();
+		int count=0;
+		int count1=0;
+		LinkedList<Character> l1=new LinkedList<Character>();
+		for (int i = 0; i < c1.length; i++) {
+			for (int j= 0; j < c2.length; j++) {
+				if(c2[j]==c1[i]||c1[i]==(c2[j]+32)||c1[i]==(c2[j]-32)){
+					count++;
+				}
+			}
+
+			for (int k = 0; k < l1.size(); k++) {
+				char r=l1.get(k);
+				if(c1[i]==r||c1[i]==(r+32)||c1[i]==(r-32)){
+					count1++;
+				}
+			}
+			if(count1==0){
+				count1=0;
+				System.out.print(count);
+			}
+			l1.add(c1[i]);
+			System.out.print(c1[i]);
+			count=0;
+		}
+	}
+}
