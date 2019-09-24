@@ -8,7 +8,6 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-import com.sun.java.util.*;
 
 public class Mainclass {
 	public static void main(String[] args) {
